@@ -1,5 +1,5 @@
 {% set name = "pathspec" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 562aa70af2e0d434367d9790ad37aed893de47f1693e4201fd1d3dca15d19b96
+  sha256: da45173eb3a6f2a5a487efba21f050af2b41948be6ab52b6a1e3ff22bb8b7061
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -37,7 +37,7 @@ about:
   home: https://github.com/cpburnz/python-path-specification
   license: MPL-2.0
   license_file: LICENSE
-  summary: 'Utility library for gitignore style pattern matching of file paths.'
+  summary: Utility library for gitignore style pattern matching of file paths.
 
   description: |
     pathspec is a utility library for pattern matching of file paths. So far
