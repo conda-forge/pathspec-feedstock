@@ -5,9 +5,11 @@ Home: https://github.com/cpburnz/python-path-specification
 
 Package license: MPL-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pathspec-feedstock/blob/master/LICENSE.txt)
 
 Summary: Utility library for gitignore style pattern matching of file paths.
+
+Documentation: https://python-path-specification.readthedocs.io
 
 pathspec is a utility library for pattern matching of file paths. So far
 this only includes Git's wildmatch pattern matching which itself is derived
