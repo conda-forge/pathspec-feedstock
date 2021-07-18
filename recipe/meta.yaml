@@ -24,9 +24,11 @@ requirements:
 test:
   requires:
     - pytest
+    - pip
   imports:
     - pathspec
   commands:
+    - pip check
     - pytest --pyargs pathspec  # [unix]
     # skip symlink tests on windows
     # https://github.com/cpburnz/python-path-specification/commit/d268375a4c6aa
