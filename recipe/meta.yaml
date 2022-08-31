@@ -21,6 +21,8 @@ requirements:
     - python >=3.7
 
 test:
+  source_files:
+    - tests
   requires:
     - pytest
     - pip
@@ -28,10 +30,10 @@ test:
     - pathspec
   commands:
     - pip check
-    - pytest --pyargs pathspec  # [unix]
+    - cd tests && pytest  # [unix]
     # skip symlink tests on windows
     # https://github.com/cpburnz/python-path-specification/commit/d268375a4c6aa
-    - pytest --pyargs pathspec -k "not test_2_1_check_realpath and not test_2_4_recursive_links and not test_2_5_recursive_circular_links"  # [win]
+    - cd tests && pytest -k "not test_2_1_check_realpath and not test_2_4_recursive_links and not test_2_5_recursive_circular_links"  # [win]
 
 about:
   home: https://github.com/cpburnz/python-path-specification
