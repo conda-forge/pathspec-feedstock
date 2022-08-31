@@ -1,12 +1,11 @@
-{% set name = "pathspec" %}
 {% set version = "0.10.0" %}
 
 package:
-  name: {{ name }}
+  name: pathspec
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/p/pathspec/pathspec-{{ version }}.tar.gz
   sha256: 01eecd304ba0e6eeed188ae5fa568e99ef10265af7fd9ab737d6412b4ee0ab85
 
 build:
@@ -16,10 +15,10 @@ build:
 
 requirements:
   host:
-    - python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*
+    - python >=3.7
     - pip
   run:
-    - python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*
+    - python >=3.7
 
 test:
   requires:
@@ -33,7 +32,6 @@ test:
     # skip symlink tests on windows
     # https://github.com/cpburnz/python-path-specification/commit/d268375a4c6aa
     - pytest --pyargs pathspec -k "not test_2_1_check_realpath and not test_2_4_recursive_links and not test_2_5_recursive_circular_links"  # [win]
-
 
 about:
   home: https://github.com/cpburnz/python-path-specification
