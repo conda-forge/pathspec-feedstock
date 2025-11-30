@@ -11,8 +11,6 @@ Summary: A utility library for pattern matching of file paths
 
 Development: https://github.com/cpburnz/python-pathspec
 
-Documentation: https://github.com/cpburnz/python-pathspec
-
 Current build status
 ====================
 
@@ -147,5 +145,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@cpburnz](https://github.com/cpburnz/)
+* [@bollwyvl](https://github.com/bollwyvl/)
+* [@proinsias](https://github.com/proinsias/)
 
