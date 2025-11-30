@@ -1,0 +1,45 @@
+schema_version: 1
+
+context:
+  version: 0.12.1
+  python_min: "3.8"
+
+package:
+  name: pathspec
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/p/pathspec/pathspec-${{ version }}.tar.gz
+  sha256: a482d51503a1ab33b1c67a6c3813a26953dbdc71c31dacaef9a838c4e29f5712
+
+build:
+  noarch: python
+  number: 2
+  script:
+    - python -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
+
+requirements:
+  host:
+    - flit-core >=3.2,<4
+    - pip
+    - python ${{ python_min }}.*
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      python_version: ${{ python_min }}.*
+      imports:
+        - pathspec
+      pip_check: true
+
+about:
+  homepage: https://github.com/cpburnz/python-pathspec
+  documentation: https://github.com/cpburnz/python-pathspec
+  repository: https://github.com/cpburnz/python-pathspec
+  summary: A utility library for pattern matching of file paths
+  license: MPL-2.0
+
+extra:
+  recipe-maintainers:
+    - cpburnz
