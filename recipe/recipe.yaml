@@ -39,6 +39,7 @@ about:
   repository: https://github.com/cpburnz/python-pathspec
   summary: A utility library for pattern matching of file paths
   license: MPL-2.0
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
