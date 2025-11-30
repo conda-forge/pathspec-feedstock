@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
-  version: 0.12.1
-  python_min: "3.8"
+  version: "0.12.1"
+  python_check_max: "3.14"
 
 package:
   name: pathspec
@@ -16,7 +17,7 @@ build:
   noarch: python
   number: 2
   script:
-    - python -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
@@ -28,14 +29,14 @@ requirements:
 
 tests:
   - python:
-      python_version: ${{ python_min }}.*
-      imports:
-        - pathspec
+      imports: pathspec
       pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - ${{ python_check_max }}.*
 
 about:
   homepage: https://github.com/cpburnz/python-pathspec
-  documentation: https://github.com/cpburnz/python-pathspec
   repository: https://github.com/cpburnz/python-pathspec
   summary: A utility library for pattern matching of file paths
   license: MPL-2.0
@@ -43,4 +44,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - cpburnz
+    - bollwyvl
+    - proinsias
