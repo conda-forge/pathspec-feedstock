@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: pathspec
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pathspec/pathspec-{{ version }}.tar.gz
-  sha256: 9ada63a23541746b0cf7d5672a39ea77eac31dd23a80470be90df83537512131
+  sha256: e2769b508d0dd47b09af6ee2c75b2744a2cb1f474ae4b1494fd6a1b7a841613c
 
 build:
   noarch: python
