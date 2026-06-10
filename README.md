@@ -3,18 +3,13 @@ About pathspec-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pathspec-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/cpburnz/python-path-specification
+Home: https://github.com/cpburnz/python-pathspec
 
 Package license: MPL-2.0
 
-Summary: Utility library for gitignore style pattern matching of file paths.
+Summary: A utility library for pattern matching of file paths
 
-Documentation: https://python-path-specification.readthedocs.io
-
-pathspec is a utility library for pattern matching of file paths. So far
-this only includes Git's wildmatch pattern matching which itself is derived
-from Rsync's wildmatch. Git uses wildmatch for its gitignore files.
-
+Development: https://github.com/cpburnz/python-pathspec
 
 Current build status
 ====================
